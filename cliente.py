@@ -8,31 +8,25 @@ class Cliente:
         self.email=mail
 
     #Comandos
-    def establecerNumeroid(self, num:int):
+    def establecer_numeroid(self, num:int):
         self.numeroid=num
-    def establcerNombres(self, nom:str):
+    def establcer_nombres(self, nom:str):
         self.nombres=nom
-    def establecerApellido(self, apell:str):
+    def establecer_apellido(self, apell:str):
         self.apellido=apell
-    def establecerEmail(self, mail:str):
+    def establecer_email(self, mail:str):
         self.email=mail
 
     #Consultas
-    def obtenerNumeroid(self):
+    def obtener_numeroid(self):
         return self.numeroid
-    def obtenerNombres(self):
+    def obtener_nombres(self):
         return self.nombres
-    def obtenerApellido(self):
+    def obtener_apellido(self):
         return self.apellido
-    def obtenerEmail(self):
+    def obtener_email(self):
         return self.email
     def __eq__(self, numId):
-        return self.numeroid==numId.obtenerNumeroid()
+        return self.numeroid==numId.obtener_numeroid()
     def __str__(self):
         return f'ID: {self.numeroid} -- Nombre: {self.nombres} -- Apellido: {self.apellido} -- Email: {self.email}'
-    
-
-cliente1=Cliente(1, 'Axel', 'Morales', 'llolo@gmail.com')
-cliente2=Cliente(2,'Luis', 'Perez', 'mmmmm@gmail.com')
-print(cliente1.__str__())
-print(cliente1.__eq__(cliente2))

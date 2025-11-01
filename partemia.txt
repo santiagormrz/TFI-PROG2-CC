@@ -1,0 +1,4 @@
+Archivos y codigo que tengo que hacer 
+1- Clase cliente (EJERCICIO 2)
+2- Clase venta (EJERCICIO 4)
+3- eq y str en ambas clases 

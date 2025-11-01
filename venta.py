@@ -9,35 +9,30 @@ class Venta:
         self.monto=monto
 
     #Comandos
-    def establecerNumeroId(self, numId:int):
+    def establecer_numeroId(self, numId:int):
         self.numId=numId
-    def establecerFecha(self, fecha:str):
+    def establecer_fecha(self, fecha:str):
         self.fecha=fecha
-    def establecerClienteId(self, clienteId:int):
+    def establecer_clienteId(self, clienteId:int):
         self.clienteId=clienteId
-    def establecerVehiculoId(self, vehiculoId:int):
+    def establecer_vehiculoId(self, vehiculoId:int):
         self.vehiculoId=vehiculoId
-    def establecerMonto(self, monto:int):
+    def establecer_monto(self, monto:int):
         self.monto=monto
 
 
     #Consultas
-    def obtenerNumeroId(self):
+    def obtener_numeroId(self):
         return self.numId
-    def obtenerFecha(self):
+    def obtener_fecha(self):
         return self.fecha
-    def obtenerClienteId(self):
+    def obtener_clienteId(self):
         return self.clienteId
-    def obtenerVehiculoId(self):
+    def obtener_vehiculoId(self):
         return self.vehiculoId
-    def obtenerMonto(self):
+    def obtener_monto(self):
         return self.monto
     def __eq__(self, numId):
-        return self.numId==numId.obtenerNumeroId()
+        return self.numId==numId.obtener_numeroId()
     def __str__(self):
         return f'ID: {self.numId} -- Fecha: {self.fecha} -- Cliente ID: {self.clienteId} -- Vehiculo ID: {self.vehiculoId} -- Monto: ${self.monto}'
-
-venta1=Venta(1,'2023-10-01',101,201,15000)
-venta2=Venta(2,'10-5-2025',100,256,50000)
-print(venta1.__str__())
-print(venta1.__eq__(venta2))
