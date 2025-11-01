@@ -45,3 +45,10 @@ class Concesionaria:
 
     def obtener_vehiculos(self):
         return self.__vehiculos
+
+#EJERCICIO 5
+    def __eq__(self, other):
+        return self.__numero_id == other.obtener_numero_id()
+    
+    def __str__(self):
+        return f"Concesionaria ID: {self.__numero_id}, Nombre: {self.__nombre}"
