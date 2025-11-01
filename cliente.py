@@ -1,3 +1,4 @@
+#EJERCICIO 2
 class Cliente:
     #Constructor 
     def __init__(self, numid:int, nom:str, apell:str, mail:str):

@@ -1,3 +1,4 @@
+#EJERCICIO 4
 class Venta:
     #Contructor 
     def __init__(self, numId:int, fecha:str, clienteId:int, vehiculoId:int, monto:int):
