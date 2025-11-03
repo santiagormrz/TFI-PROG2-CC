@@ -14,7 +14,7 @@ class Moto(vehiculo.Vehiculo):
 
     def obtener_cilindrada(self):
         return self.__cilindrada
-        
+    
     def __str__(self):
         return (
             "Moto ID: "
