@@ -1,38 +1,41 @@
+#EJERCICIO 4
+
 class Venta:
-    #Contructor 
-    def __init__(self, numId:int, fecha:str, clienteId:int, vehiculoId:int, monto:int):
-        #Atributos de instancia
-        self.numId=numId
-        self.fecha=fecha
-        self.clienteId=clienteId
-        self.vehiculoId=vehiculoId
-        self.monto=monto
+    #Constructor 
+    def __init__(self, numero_id:int, fecha:str, cliente_id:int, vehiculo_id:int, monto:int):
+        #Atributos de instancia privados
+        self.__numero_id = numero_id
+        self.__fecha = fecha
+        self.__cliente_id = cliente_id
+        self.__vehiculo_id = vehiculo_id
+        self.__monto = monto
 
     #Comandos
-    def establecer_numeroId(self, numId:int):
-        self.numId=numId
+    def establecer_numero_id(self, numero_id:int):
+        self.__numero_id = numero_id
     def establecer_fecha(self, fecha:str):
-        self.fecha=fecha
-    def establecer_clienteId(self, clienteId:int):
-        self.clienteId=clienteId
-    def establecer_vehiculoId(self, vehiculoId:int):
-        self.vehiculoId=vehiculoId
+        self.__fecha = fecha
+    def establecer_cliente_id(self, cliente_id:int):
+        self.__cliente_id = cliente_id
+    def establecer_vehiculo_id(self, vehiculo_id:int):
+        self.__vehiculo_id = vehiculo_id
     def establecer_monto(self, monto:int):
-        self.monto=monto
-
+        self.__monto = monto
 
     #Consultas
-    def obtener_numeroId(self):
-        return self.numId
+    def obtener_numero_id(self):
+        return self.__numero_id
     def obtener_fecha(self):
-        return self.fecha
-    def obtener_clienteId(self):
-        return self.clienteId
-    def obtener_vehiculoId(self):
-        return self.vehiculoId
+        return self.__fecha
+    def obtener_cliente_id(self):
+        return self.__cliente_id
+    def obtener_vehiculo_id(self):
+        return self.__vehiculo_id
     def obtener_monto(self):
-        return self.monto
-    def __eq__(self, numId):
-        return self.numId==numId.obtener_numeroId()
+        return self.__monto
+    
+    def __eq__(self, otra_venta):
+        return self.__numero_id == otra_venta.obtener_numero_id()
+    
     def __str__(self):
-        return f'ID: {self.numId} -- Fecha: {self.fecha} -- Cliente ID: {self.clienteId} -- Vehiculo ID: {self.vehiculoId} -- Monto: ${self.monto}'
+        return f'ID: {self.__numero_id} -- Fecha: {self.__fecha} -- Cliente ID: {self.__cliente_id} -- Vehiculo ID: {self.__vehiculo_id} -- Monto: ${self.__monto}'
