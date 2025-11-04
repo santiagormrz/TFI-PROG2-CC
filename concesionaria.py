@@ -51,4 +51,27 @@ class Concesionaria:
         return self.__numero_id == other.obtener_numero_id()
     
     def __str__(self):
-        return f"Concesionaria ID: {self.__numero_id}, Nombre: {self.__nombre}"
+        texto = f"Concesionaria ID: {self.__numero_id}, Nombre: {self.__nombre}\n\n"
+        
+        texto += "=== CLIENTES ===\n"
+        if len(self.__clientes) == 0:
+            texto += "Sin clientes registrados\n"
+        else:
+            for cliente in self.__clientes:
+                texto += str(cliente) + "\n"
+        
+        texto += "\n=== SUCURSALES ===\n"
+        if len(self.__sucursales) == 0:
+            texto += "Sin sucursales registradas\n"
+        else:
+            for sucursal in self.__sucursales:
+                texto += str(sucursal) + "\n"
+        
+        texto += "\n=== VEHÍCULOS ===\n"
+        if len(self.__vehiculos) == 0:
+            texto += "Sin vehículos registrados\n"
+        else:
+            for vehiculo in self.__vehiculos:
+                texto += str(vehiculo) + "\n"
+        
+        return texto
